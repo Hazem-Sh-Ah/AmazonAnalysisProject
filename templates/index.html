@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="diagonal"></div>
+    <header>
+        <ul> 
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill control ct-1 li-1 active" viewbox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                    <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                </svg>
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" class="control ct-2 li-2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" class="control ct-3 li-3"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 7.5C2 6.71403 2.16486 5.96657 2.46189 5.29031L5.01041 7.83883C5.79146 8.61988 7.05779 8.61988 7.83884 7.83883C8.61989 7.05779 8.61989 5.79146 7.83884 5.01041L5.29032 2.46189C5.96658 2.16486 6.71404 2 7.5 2C10.5376 2 13 4.46243 13 7.5C13 8.28596 12.8351 9.03342 12.5381 9.70968L21.435 18.6066C22.2161 19.3877 22.2161 20.654 21.435 21.435V21.435C20.654 22.2161 19.3877 22.2161 18.6066 21.435L9.70968 12.5381C9.03342 12.8351 8.28597 13 7.5 13C4.46243 13 2 10.5376 2 7.5Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>            </li>
+            <li>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" class="control ct-4 li-4"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.17157 3.17157C3 4.34315 3 6.22876 3 10V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V10C21 6.22876 21 4.34315 19.8284 3.17157C18.6569 2 16.7712 2 13 2H11C7.22876 2 5.34315 2 4.17157 3.17157ZM7.25 8C7.25 7.58579 7.58579 7.25 8 7.25H16C16.4142 7.25 16.75 7.58579 16.75 8C16.75 8.41421 16.4142 8.75 16 8.75H8C7.58579 8.75 7.25 8.41421 7.25 8ZM7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H16C16.4142 11.25 16.75 11.5858 16.75 12C16.75 12.4142 16.4142 12.75 16 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12ZM8 15.25C7.58579 15.25 7.25 15.5858 7.25 16C7.25 16.4142 7.58579 16.75 8 16.75H13C13.4142 16.75 13.75 16.4142 13.75 16C13.75 15.5858 13.4142 15.25 13 15.25H8Z" fill="#ffffff"></path> </g></svg>
+            </li>
+        </ul>
+    </header>
+    <button class="log">Log in</button>
+    <div class="log-in off"> 
+        <div class="log-cont">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-x close" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
+            </svg>
+            <div class="inp-cont inp-cont-1">
+                <span class="desc-1">Username:</span>
+                <input type="text" id="username">
+            </div>
+            <div class="inp-cont">
+                <span class="desc-1">Password:</span>
+                <input type="password" id="pass">
+            </div>
+            <div class="but-cont">
+                <but class="form-but" id="log-but">Log in</but>
+                <but class="form-but" id="sign-but">Sign up</but>
+            </div>
+            <input type="color" id="col" value="#0d78f2">
+        </div>
+    </div>
+    <h1 class="title">Amazon Dataset Project</h1>
+    <div class="form-cont">
+        <div class="select-cont sc-1">
+            <span class="desc">Chart Type:</span>
+            <select name="Chart Type" id="category">
+                <option value="bar">Bar</option>
+                <option value="pie">Pie</option>
+                <option value="scatter">Scatter</option>
+            </select>
+        </div>
+        <div class="select-cont sc-2">
+            <span class="desc">Categories:</span>
+            <div id="list1" class="dropdown-check-list">
+                <span class="anchor">Category</span>
+                <ul class="items">
+                  <li><input type="checkbox" checked class="input-check"/>Appliances</li>
+                  <li><input type="checkbox" checked class="input-check"/>Bags & Luggage</li>
+                  <li><input type="checkbox" checked class="input-check"/>Beauty & Health</li>
+                  <li><input type="checkbox" checked class="input-check"/>Car & Motorbike</li>
+                  <li><input type="checkbox" checked class="input-check"/>Grocery & Gourmet Foods</li>
+                  <li><input type="checkbox" checked class="input-check"/>Home, Kitchen, Pets</li>
+                  <li><input type="checkbox" checked class="input-check"/>Industrial Supplies</li>
+                  <li><input type="checkbox" checked class="input-check"/>Kids' Fashion</li>
+                  <li><input type="checkbox" checked class="input-check"/>Men's Clothing</li>
+                  <li><input type="checkbox" checked class="input-check"/>Men's Shoes</li>
+                  <li><input type="checkbox" checked class="input-check"/>Music</li>
+                  <li><input type="checkbox" checked class="input-check"/>Pet Supplies</li>
+                  <li><input type="checkbox" checked class="input-check"/>Sports & Fitness</li>
+                  <li><input type="checkbox" checked class="input-check"/>Stores</li>
+                  <li><input type="checkbox" checked class="input-check"/>Toys & Baby Products </li>
+                  <li><input type="checkbox" checked class="input-check"/>TV, Audio & Cameras</li>
+                  <li><input type="checkbox" checked class="input-check"/>Women's Clothing</li>
+                  <li><input type="checkbox" checked class="input-check"/>Women's Shoes</li>
+                </ul>
+            </div>
+        </div>
+        <div class="select-cont sc-3">
+            <span class="desc">Compare:</span>
+            <select name="Compare" id="compare">
+                <option value="mean-p">Mean Price</option>
+                <option value="med-p">Median Price</option>
+                <option value="mean-r">Mean Rating</option>
+                <option value="med-r">Median Ratings</option>
+                <option value="mean-nr">Mean No. Ratings</option>
+                <option value="med-nr">Median No. Ratings</option>
+            </select>
+        </div>
+        <div class="select-cont sc-4 hide">
+            <span class="desc">Compare X:</span>
+            <select name="Compare" id="compare-x">
+                <option value="price">Price</option>
+                <option value="discount">Discount Price</option>
+                <option value="rating">Ratings</option>
+                <option value="n-rating">No. Ratings</option>
+            </select>
+        </div>
+        <div class="select-cont sc-5 hide">
+            <span class="desc">Compare Y:</span>
+            <select name="Compare" id="compare-y">
+                <option value="price">Price</option>
+                <option value="discount">Discount Price</option>
+                <option value="rating">Ratings</option>
+                <option value="n-rating">No. Ratings</option>
+            </select>
+        </div>
+    </div>
+    <button class="but">Show Graph</button>
+    <!-- <img src="{{ url_for('static',filename='my_image.png') }}" height="500" class="graph hide"> -->
+    <div>
+        <canvas class="chart1" width="1000" id="1" style="margin-bottom: 60vh;"></canvas>
+    </div>
+
+    <h1 class="title">Example Graph</h1>
+    <div>
+        <canvas class="chart2" width="1000" id="2" style="margin-bottom: 50px;"></canvas>
+    </div>
+
+    <h1 class="title" id="ser">Search for item</h1>
+    <div class="search-cont">
+        <input type="text" placeholder="Enter item name" class="search-inp">
+        <select name="search" id="search">
+            <option value="Air Conditioners">Air Conditioners</option>
+            <option value="All Appliances">All Appliances</option>
+            <option value="All Car & Motorbike Products">All Car & Motorbike Products</option>
+            <option value="All Electronics">All Electronics</option>
+            <option value="All Exercise & Fitness">All Exercise & Fitness</option>
+            <option value="All Grocery & Gourmet Foods">All Grocery & Gourmet Foods</option>
+            <option value="All Home & Kitchen">All Home & Kitchen</option>
+            <option value="All Pet Supplies">All Pet Supplies</option>
+            <option value="All Sports, Fitness & Outdoors">All Sports, Fitness & Outdoors</option>
+            <option value="Amazon Fashion">Amazon Fashion</option>
+            <option value="Baby Bath, Skin & Grooming">Baby Bath, Skin & Grooming</option>
+            <option value="Baby Fashion">Baby Fashion</option>
+            <option value="Baby Products">Baby Products</option>
+            <option value="Backpacks">Backpacks</option>
+            <option value="Badminton">Badminton</option>
+            <option value="Bags & Luggage">Bags & Luggage</option>
+            <option value="Ballerinas">Ballerinas</option>
+            <option value="Beauty & Grooming">Beauty & Grooming</option>
+            <option value="Bedroom Linen">Bedroom Linen</option>
+            <option value="Camera Accessories">Camera Accessories</option>
+            <option value="Cameras">Cameras</option>
+            <option value="Camping & Hiking">Camping & Hiking</option>
+            <option value="Car & Bike Care">Car & Bike Care</option>
+            <option value="Car Accessories">Car Accessories</option>
+            <option value="Car Electronics">Car Electronics</option>
+            <option value="Car Parts">Car Parts</option>
+            <option value="Cardio Equipment">Cardio Equipment</option>
+            <option value="Casual Shoes">Casual Shoes</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Coffee, Tea & Beverages">Coffee, Tea & Beverages</option>
+            <option value="Cricket">Cricket</option>
+            <option value="Cycling">Cycling</option>
+            <option value="Diapers">Diapers</option>
+            <option value="Diet & Nutrition">Diet & Nutrition</option>
+            <option value="Dog supplies">Dog supplies</option>
+            <option value="Ethnic Wear">Ethnic Wear</option>
+            <option value="Fashion & Silver Jewellery">Fashion & Silver Jewellery</option>
+            <option value="Fashion Sales & Deals">Fashion Sales & Deals</option>
+            <option value="Fashion Sandals">Fashion Sandals</option>
+            <option value="Fitness Accessories">Fitness Accessories</option>
+            <option value="Football">Football</option>
+            <option value="Formal Shoes">Formal Shoes</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Garden & Outdoors">Garden & Outdoors</option>
+            <option value="Gold & Diamond Jewellery">Gold & Diamond Jewellery</option>
+            <option value="Handbags & Clutches">Handbags & Clutches</option>
+            <option value="Headphones">Headphones</option>
+            <option value="Health & Personal Care">Health & Personal Care</option>
+            <option value="Heating & Cooling Appliances">Heating & Cooling Appliances</option>
+            <option value="Home Audio & Theater">Home Audio & Theater</option>
+            <option value="Home Décor">Home Décor</option>
+            <option value="Home Entertainment Systems">Home Entertainment Systems</option>
+            <option value="Home Furnishing">Home Furnishing</option>
+            <option value="Home Improvement">Home Improvement</option>
+            <option value="Home Storage">Home Storage</option>
+            <option value="Household Supplies">Household Supplies</option>
+            <option value="Indoor Lighting">Indoor Lighting</option>
+            <option value="Industrial & Scientific Supplies">Industrial & Scientific Supplies</option>
+            <option value="Innerwear">Innerwear</option>
+            <option value="International Toy Store">International Toy Store</option>
+            <option value="Janitorial & Sanitation Supplies">Janitorial & Sanitation Supplies</option>
+            <option value="Jeans">Jeans</option>
+            <option value="Jewellery">Jewellery</option>
+            <option value="Kids' Clothing">Kids' Clothing</option>
+            <option value="Kids' Fashion">Kids' Fashion</option>
+            <option value="Kids' Shoes">Kids' Shoes</option>
+            <option value="Kids' Watches">Kids' Watches</option>
+            <option value="Kitchen & Dining">Kitchen & Dining</option>
+            <option value="Kitchen & Home Appliances">Kitchen & Home Appliances</option>
+            <option value="Kitchen Storage & Containers">Kitchen Storage & Containers</option>
+            <option value="Lab & Scientific">Lab & Scientific</option>
+            <option value="Lingerie & Nightwear">Lingerie & Nightwear</option>
+            <option value="Luxury Beauty">Luxury Beauty</option>
+            <option value="Make-up">Make-up</option>
+            <option value="Men's Fashion">Men's Fashion</option>
+            <option value="Motorbike Accessories & Parts">Motorbike Accessories & Parts</option>
+            <option value="Musical Instruments & Professional Audio">Musical Instruments & Professional Audio</option>
+            <option value="Nursing & Feeding">Nursing & Feeding</option>
+            <option value="Personal Care Appliances">Personal Care Appliances</option>
+            <option value="Refrigerators">Refrigerators</option>
+            <option value="Refurbished & Open Box">Refurbished & Open Box</option>
+            <option value="Rucksacks">Rucksacks</option>
+            <option value="Running">Running</option>
+            <option value="School Bags">School Bags</option>
+            <option value="Security Cameras">Security Cameras</option>
+            <option value="Sewing & Craft Supplies">Sewing & Craft Supplies</option>
+            <option value="Shirts">Shirts</option>
+            <option value="Shoes">Shoes</option>
+            <option value="Snack Foods">Snack Foods</option>
+            <option value="Speakers">Speakers</option>
+            <option value="Sports Shoes">Sports Shoes</option>
+            <option value="Sportswear">Sportswear</option>
+            <option value="STEM Toys Store">STEM Toys Store</option>
+            <option value="Strength Training">Strength Training</option>
+            <option value="Strollers & Prams">Strollers & Prams</option>
+            <option value="Suitcases & Trolley Bags">Suitcases & Trolley Bags</option>
+            <option value="Sunglasses">Sunglasses</option>
+            <option value="T-shirts & Polos">T-shirts & Polos</option>
+            <option value="Televisions">Televisions</option>
+            <option value="Test, Measure & Inspect">Test, Measure & Inspect</option>
+            <option value="The Designer Boutique">The Designer Boutique</option>
+            <option value="Toys & Games">Toys & Games</option>
+            <option value="Toys Gifting Store">Toys Gifting Store</option>
+            <option value="Travel Accessories">Travel Accessories</option>
+            <option value="Travel Duffles">Travel Duffles</option>
+            <option value="Value Bazaar">Value Bazaar</option>
+            <option value="Wallets">Wallets</option>
+            <option value="Washing Machines">Washing Machines</option>
+            <option value="Watches">Watches</option>
+            <option value="Western Wear">Western Wear</option>
+            <option value="Women's Fashion">Women's Fashion</option>
+            <option value="Yoga">Yoga</option>
+        </select>
+        <input type="number" min="1" max="100" class="num-inp" value="10">
+    </div>
+    <div class="results">   
+    </div>
+    <h1 class="title" style="margin-top: 60vh;" id="arch">Architecture</h1>
+    <img src="{{ url_for('static',filename='flowchart.svg') }}" style="margin-bottom: 60vh;">
+
+    <h1 class="title" id="doc">Documentation</h1>
+    <div class="cont">
+        <div class="section">
+            <span class="sec-title">Data Preparation</span>
+            <span class="content">I used a csv file from the online dataset website Kaggle.com. This dataset contains infromation from Amazon.in, or Amazon India, and is seperated into more than a hundered files, pertaining to the
+                various item categories on the website. I combined all of these files into one, which made the dataset far easier to use. Another issue was that the prices were in Indian rupees, so I converted it to U.S dollars, which is 
+                more widely used. I also removed any null and outlier values, which facilitated the data analysis and allowed it reflect the actual dataset. Overall, this was an important step in preparation for the next parts of the project.
+                <br>The link:  <a href="https://www.kaggle.com/datasets/lokeshparab/amazon-products-dataset">https://www.kaggle.com/datasets/lokeshparab/amazon-products-dataset</a>   
+            </span>
+        </div>
+        <div class="section">
+            <span class="sec-title">HTML & CSS</span>
+            <span class="content">The website is the lens by which the user views my project. This is the frontend of the application. In order to create this, I used HTML and CSS. The HTML is the langauge which outlines the structure of the website,
+                and contains all the elements that it is made up of. The CSS is what styles my website, making it appear attractive, and user friendly. This includes everything from coloring to animations, and ensures that the website is professional.
+                Throughout the website, I used a color scheme, which makes it much easier to highlight particular parts of the site, and also adds to consistency to the page. 
+            </span>
+        </div>
+        <div class="section">
+            <span class="sec-title">JavaScript</span>
+            <span class="content">The main component of the frontend is the JavaScript. I used JavaScript to make the website interactive, and also to communicate with the server and the databases. For example, I used this langauge to add events when 
+                buttons are clicked. But the most important job of the JavaScript was to receive and send data from/to the sever. I did this with the fetch api, and it integrated well with the backend as both could handle json data. To make the charts interactive, 
+                I needed to use an external library, and that was Chart.js. Chart.js allows for the creation of many graph types, including bar, line and pie charts.</span>
+        </div>
+        <div class="section">
+            <span class="sec-title">Python</span>
+            <span class="content">On the other end, Python was the main langauge of the backend of this project. Python on its own cannot run a full backend sever, so I used the Flask library in order to do this. Flask is very easy to use and lightweight, unlike other
+                frameworks, such as Django. As this project did not need a complex backend, and I decided to used Flask. I believe it worked excellently, and as I said, both the backend and frontend accepted json data, making communication easier. The backend handled all
+                requests, and I had many end points for various tasks, like requesting data, signing up a new user and more.  
+            </span>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static',filename='chart.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='chartjs-adapter-date-fns.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='script.js') }}"></script>
+</body>
+</html>
